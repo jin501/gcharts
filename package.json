@@ -4,6 +4,10 @@
   "description": "google search trends visualization",
   "main": "index.js",
   "scripts": {
+    "start": "npm-run-all --parallel open:src lint:watch",
+    "open:src": "babel-node server/server.js",
+    "lint": "node_modules/.bin/esw webpack.config.* server src",
+    "lint:watch": "npm run lint -- --watch",
     "test": "npm test"
   },
   "repository": {
@@ -14,7 +18,7 @@
     "d3",
     "viz"
   ],
-  "author": "Sol Jin, Derrick Quarters, Hanna Redleaf",
+  "author": "Sol Jin, Derick Quartey, Hanna Redleaf",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jin501/gcharts/issues"
