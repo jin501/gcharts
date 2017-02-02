@@ -4,8 +4,9 @@
   "description": "google search trends visualization",
   "main": "index.js",
   "scripts": {
+    "prestart": "babel-node server/startMessage",
     "start": "npm-run-all --parallel open:src lint:watch",
-    "open:src": "babel-node server/server.js",
+    "open:src": "babel-node server/server",
     "lint": "node_modules/.bin/esw webpack.config.* server src",
     "lint:watch": "npm run lint -- --watch",
     "test": "npm test"
@@ -25,15 +26,16 @@
   },
   "homepage": "https://github.com/jin501/gcharts#readme",
   "dependencies": {
-      "babel-polyfill": "6.8.0",
-      "bootstrap": "3.3.6",
-      "react": "15.0.2",
-      "react-dom": "15.0.2",
-      "react-redux": "4.4.5",
-      "react-router": "2.4.0",
-      "react-router-redux": "4.0.4",
-      "redux": "3.5.2",
-      "redux-thunk": "2.0.1"
+    "babel-polyfill": "6.8.0",
+    "bootstrap": "3.3.6",
+    "cat-me": "^1.0.3",
+    "react": "15.0.2",
+    "react-dom": "15.0.2",
+    "react-redux": "4.4.5",
+    "react-router": "2.4.0",
+    "react-router-redux": "4.0.4",
+    "redux": "3.5.2",
+    "redux-thunk": "2.0.1"
   },
   "devDependencies": {
     "babel-cli": "6.8.0",

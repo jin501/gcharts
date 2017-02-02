@@ -1,3 +1,14 @@
-/* eslint-disable no-console */
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import { Router, browserHistory } from 'react-router';
 
-const hello = "meow";
+import routes from './routes';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './css/styles.css';
+
+const containerNode = document.querySelector("#main");
+
+render(
+  <Router history={browserHistory} routes={routes} />
+  , containerNode
+);
